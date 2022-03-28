@@ -5,3 +5,7 @@
  * @package wplearning
 */
 ?>
+
+
+</body>
+</html>
