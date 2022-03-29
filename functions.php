@@ -5,6 +5,12 @@
  * @package wplearning
 */
 
+add_theme_support('custom-logo');
+
+register_nav_menus( array(
+    'primary'   => __( 'Primary Menu', 'wplearning' )
+) );
+
 function wplearning_theme_scripts() {
     wp_register_style('style', get_stylesheet_uri(), [], false, 'all');
     wp_register_style('bootstrap', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css', [] , false , 'all');
