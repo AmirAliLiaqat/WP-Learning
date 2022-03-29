@@ -15,3 +15,54 @@ Text Domain: wplearning
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+/*****************
+01: Header
+*****************/
+.site-header{
+    height: 150px;
+    background: #f0f0f0;
+}
+.site-branding{
+    text-align: center;
+    width: 100%;
+    clear: both;
+}
+.site-branding img{
+    max-width: 200px;
+    max-height: 150px;
+}
+/*****************
+02: Main Menu
+*****************/
+.site-navigation{
+    width: 100%;
+    display: block;
+    clear: both;
+    background: #2ca358;
+    height: 60px;
+    float: right;
+}
+/*****************
+03: Home Content
+*****************/
+.home-main{
+    margin-top: 50px;
+}
+.home-posts{
+    background: #f0f0f0;
+    padding: 30px 30px !important;
+}
+/********************
+04: Sidebar & Widgets
+********************/
+.home-sidebar{
+    background: #ddd;
+}
+/********************
+05: Footer
+********************/
+.site-footer{
+    margin-top: 15px;
+    background: #333;
+    height: 200px;
+}
