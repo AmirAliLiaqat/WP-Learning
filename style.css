@@ -40,17 +40,71 @@ Use it to make something cool, have fun, and share what you've learned with othe
     clear: both;
     background: #2ca358;
     height: 60px;
-    float: right;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.menu-item a{
+    margin: 20px;
+    color: #000;
+    text-decoration: none;
+}
+.menu-item a:hover{
+    color: #fff;
 }
 /*****************
 03: Home Content
 *****************/
 .home-main{
-    margin-top: 50px;
+    margin-top: 30px;
 }
 .home-posts{
     background: #f0f0f0;
-    padding: 30px 30px !important;
+    padding: 0px 10px !important;
+}
+.post-header .post-thumbnail a{
+    display: inline-block;
+    width: 100%;
+}
+.post-header .post-thumbnail img{
+    width: 100%;
+}
+.post-header h1{
+    font-size: 36px;
+    margin-top: 15px;
+    background: #fff;
+    padding: 10px;
+}
+.post-header h1 a{
+    text-decoration: none;
+}
+.post-header h1 a:hover{
+    color: #000;
+}
+.post-meta{
+    float: left;
+    margin-right: 10px;
+    clear: both;
+}
+.pagination{
+    padding: 10px;
+    text-align: center;
+}
+.pagination a, .page-numbers.current{
+    display: inline-block;
+    margin: 0 5px;
+    padding: 10px 15px;
+    color: #333;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.page-numbers.current{
+    background: #fff;
 }
 /********************
 04: Sidebar & Widgets
@@ -58,11 +112,22 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .home-sidebar{
     background: #ddd;
 }
+.widget{
+    margin: 20px 0;
+    padding: 10px 15px;
+    /* background: #fff; */
+}
+.wp-block-group__inner-container h2{
+    background: #000;
+    color: #fff;
+    font-size: 30px;
+    padding: 5px 10px;
+}
 /********************
 05: Footer
 ********************/
 .site-footer{
     margin-top: 15px;
     background: #333;
-    height: 200px;
+    /* height: 200px; */
 }
