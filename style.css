@@ -34,6 +34,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*****************
 02: Main Menu
 *****************/
+body a{
+    text-decoration: none;
+}
 .site-navigation{
     width: 100%;
     display: block;
@@ -41,19 +44,32 @@ Use it to make something cool, have fun, and share what you've learned with othe
     background: #2ca358;
     height: 60px;
 }
-.menu{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.site-navigation ul{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    clear: both;
+    text-align: center;
     list-style: none;
 }
-.menu-item a{
-    margin: 20px;
-    color: #000;
-    text-decoration: none;
+.site-navigation ul li{
+    display: inline-block;
+    height: 60px;
+    margin-left: -4px;
 }
-.menu-item a:hover{
-    color: #fff;
+.site-navigation ul li a{
+    display: inline-block;
+    height: 100%;
+    padding: 0 40px;
+    line-height: 60px;
+    color: #f0f0f0;
+    border-right: 1px solid #83cb8d;
+}
+.site-navigation ul li a:hover{
+    background: #000;
+}
+.site-navigation ul li:first-child{
+    border-left: 1px solid #83cb8d;
 }
 /*****************
 03: Home Content
@@ -62,7 +78,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     margin-top: 30px;
 }
 .home-posts{
-    background: #f0f0f0;
+    /* background: #f0f0f0; */
     padding: 0px 10px !important;
 }
 .post-header .post-thumbnail a{
@@ -105,6 +121,36 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .page-numbers.current{
     background: #fff;
+}
+.home-posts .col .section-head{
+    padding: 10px;
+    background: #2ca358;
+    color: #fff;
+}
+.home-posts .col .section-head h3{
+    margin: 0;
+}
+.home-posts .post-thumb img{
+    max-width: 100%;
+    height: 100px!important;
+}
+.home-service-col{
+    text-align: center;
+}
+.service-thumb{
+    margin-bottom: 10px;
+}
+.owl-nav{
+    text-align: center;
+}
+.owl-nav button{
+    display: inline-block !important;
+    font-size: 50px !important;
+    margin: 0 10px !important;
+    padding: 10px 10px 20px 10px !important;
+    background: #f8f8f8 !important;
+    min-width: 50px !important;
+    line-height: 1 !important;
 }
 /********************
 04: Sidebar & Widgets
