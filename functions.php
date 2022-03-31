@@ -39,15 +39,19 @@ add_action('after_setup_theme', 'wplearning_theme_setup');
 function wplearning_theme_scripts() {
     wp_register_style('style', get_stylesheet_uri(), [], false, 'all');
     wp_register_style('bootstrap', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css', [] , false , 'all');
+    wp_register_style('owl-carousel', get_template_directory_uri() . '/owl-carousel/assets/owl.carousel.min.css', [] , false , 'all');
 
     wp_register_script('script', get_template_directory_uri() . '/assets/js/main.js', []);
     wp_register_script('bootstrap', get_template_directory_uri() . '/assets/bootstrap/js/bootstrap.min.js', ['jquery']);
+    wp_register_script('owl-carousel', get_template_directory_uri() . '/owl-carousel/owl.carousel.min.js');
 
     wp_enqueue_style('style');
     wp_enqueue_style('bootstrap');
+    wp_enqueue_style('owl-carousel');
 
     wp_enqueue_script('script');
     wp_enqueue_script('bootstrap');
+    wp_enqueue_script('owl-carousel');
 }
 add_action('wp_enqueue_scripts', 'wplearning_theme_scripts');
 
@@ -100,5 +104,23 @@ function wplearning_widgets_init() {
     ) );
 }
 add_action('widgets_init', 'wplearning_widgets_init');
+
+/**
+ * Filter the except length to 20 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+// Inculde Customizer
+require get_template_directory() . '/inc/customizer.php';
+
+// Inculde Custom Post Types
+require get_template_directory() . '/inc/services.php';
+require get_template_directory() . '/inc/projects.php';
 
 ?>
